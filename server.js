@@ -14,10 +14,10 @@ connectToDb();
 // HTTP Server
 const server = http.createServer(app);
 
-// Socket Init
+
 initSocket(server);
 
-// Start Server
+
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

@@ -11,7 +11,6 @@ import messageRoutes from "./routes/messageRoutes.js";
 
 const app = express();
 
-// Middlewares
 app.use(helmet());
 
 app.use(
@@ -32,7 +31,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
 
-// 404
+
 app.use((req, res) => {
   res.status(404).json({ message: "Route Not Found" });
 });
